@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img">
+  <title>Steaming cup of coffee beside a bag of beans</title>
+  <rect width="600" height="600" fill="#e9b872"/>
+  <circle cx="300" cy="320" r="230" fill="#f4d3a2"/>
+  <!-- bag -->
+  <path d="M370 170 h140 l16 250 a14 14 0 0 1 -14 15 h-144 a14 14 0 0 1 -14 -15 z" fill="#6a3519"/>
+  <rect x="362" y="150" width="156" height="28" rx="6" fill="#8a4b2a"/>
+  <circle cx="440" cy="300" r="42" fill="#fbf6ef"/>
+  <path d="M440 270 q-22 30 0 60 q22 -30 0 -60 z" fill="#8a4b2a"/>
+  <rect x="396" y="360" width="88" height="10" rx="5" fill="#e9b872"/>
+  <rect x="408" y="382" width="64" height="8" rx="4" fill="#e9b872" opacity=".7"/>
+  <!-- saucer + cup -->
+  <ellipse cx="220" cy="440" rx="140" ry="26" fill="#fbf6ef"/>
+  <ellipse cx="220" cy="432" rx="110" ry="18" fill="#e7dccd"/>
+  <path d="M130 300 h180 v70 a90 90 0 0 1 -180 0 z" fill="#fbf6ef"/>
+  <path d="M310 320 h28 a34 34 0 0 1 0 68 h-36" fill="none" stroke="#fbf6ef" stroke-width="16" stroke-linecap="round"/>
+  <ellipse cx="220" cy="300" rx="90" ry="18" fill="#2a1d15"/>
+  <ellipse cx="220" cy="300" rx="72" ry="12" fill="#6a3519"/>
+  <!-- steam -->
+  <g fill="none" stroke="#fbf6ef" stroke-width="9" stroke-linecap="round" opacity=".9">
+    <path d="M180 260 q-22 -30 0 -58 q22 -28 0 -56"/>
+    <path d="M225 262 q-22 -30 0 -58 q22 -28 0 -56"/>
+    <path d="M270 260 q-22 -30 0 -58 q22 -28 0 -56"/>
+  </g>
+  <!-- beans -->
+  <g fill="#2a1d15">
+    <ellipse cx="90" cy="500" rx="22" ry="14" transform="rotate(-25 90 500)"/>
+    <ellipse cx="140" cy="520" rx="22" ry="14" transform="rotate(15 140 520)"/>
+    <ellipse cx="520" cy="495" rx="22" ry="14" transform="rotate(20 520 495)"/>
+  </g>
+  <g stroke="#e9b872" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M74 506 q16 -12 32 -12" /><path d="M126 524 q16 -4 28 -8" /><path d="M504 490 q16 4 32 10"/>
+  </g>
+</svg>
