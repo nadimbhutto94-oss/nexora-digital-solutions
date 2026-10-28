@@ -1,173 +1,75 @@
 /*
-Theme Name: Beanloop Landing
-Theme URI: https://example.com/beanloop
-Author: Nadim
-Description: Single-page landing theme for Beanloop, a fictional fresh-roasted coffee subscription. Mobile-first, accessible, SEO-ready.
+Theme Name: Nexora Digital Child
+Theme URI: https://example.com/nexora-digital
+Description: A polished, responsive child theme for the Twenty Twenty-Four WordPress theme.
+Author: Nexora Digital Solutions
 Version: 1.0.0
-Requires at least: 6.0
+Requires at least: 6.4
+Tested up to: 6.8
 Requires PHP: 7.4
-License: GNU General Public License v2 or later
-Text Domain: beanloop
+Template: twentytwentyfour
+Text Domain: nexora-digital-child
 */
 
+/* Brand system */
 :root {
-  --bg: #fbf6ef;
-  --surface: #ffffff;
-  --ink: #2a1d15;
-  --muted: #6b5a4e;
-  --brand: #8a4b2a;
-  --brand-dark: #6a3519;
-  --accent: #e9b872;
-  --line: #e7dccd;
-  --radius: 14px;
-  --shadow: 0 10px 30px rgba(42, 29, 21, 0.08);
-  --max: 1100px;
+  --nexora-ink: #101c35;
+  --nexora-blue: #183b68;
+  --nexora-gold: #d6a84f;
+  --nexora-cream: #f7f5f0;
+  --nexora-muted: #667085;
+  --nexora-radius: 18px;
 }
-
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  color: var(--ink);
-  background: var(--bg);
-  line-height: 1.6;
-  -webkit-text-size-adjust: 100%;
+  color: var(--nexora-ink);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
 }
-img, svg { max-width: 100%; height: auto; display: block; }
-a { color: var(--brand); }
-h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.15; margin: 0 0 .5em; }
-h1 { font-size: clamp(2.1rem, 6vw, 3.6rem); }
-h2 { font-size: clamp(1.6rem, 4vw, 2.3rem); }
-h3 { font-size: 1.15rem; }
-p { margin: 0 0 1em; }
-
-.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 20px; }
-.section { padding: 64px 0; }
-.section--alt { background: var(--surface); border-block: 1px solid var(--line); }
-.section__head { text-align: center; max-width: 640px; margin: 0 auto 40px; }
-.section__head p { color: var(--muted); }
-.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 700; color: var(--brand); margin-bottom: 10px; }
-
-.skip-link { position: absolute; left: -999px; top: 0; background: var(--ink); color: #fff; padding: 10px 14px; z-index: 100; }
-.skip-link:focus { left: 10px; top: 10px; }
-
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-
-/* Buttons */
-.btn {
-  display: inline-block; padding: 14px 26px; border-radius: 999px; border: 2px solid var(--brand);
-  background: var(--brand); color: #fff; font-weight: 700; text-decoration: none; cursor: pointer;
-  font-size: 1rem; transition: background .15s, transform .15s;
+a { text-underline-offset: 4px; }
+.wp-site-blocks { padding-top: 0; }
+.wp-block-site-title a { color: var(--nexora-ink); text-decoration: none; font-weight: 800; letter-spacing: -.04em; }
+.wp-block-navigation a { font-weight: 600; text-decoration: none; }
+.wp-block-button__link, .nexora-button {
+  background: var(--nexora-gold);
+  border: 1px solid var(--nexora-gold);
+  border-radius: 999px;
+  color: var(--nexora-ink);
+  font-weight: 750;
+  padding: 13px 24px;
+  text-decoration: none;
+  transition: transform .2s ease, background .2s ease;
 }
-.btn:hover { background: var(--brand-dark); border-color: var(--brand-dark); transform: translateY(-1px); }
-.btn--ghost { background: transparent; color: var(--brand); }
-.btn--ghost:hover { background: var(--brand); color: #fff; }
-
-/* Header */
-.site-header { position: sticky; top: 0; z-index: 50; background: rgba(251, 246, 239, .94); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 16px; }
-.logo { font-family: Georgia, serif; font-weight: 700; font-size: 1.4rem; text-decoration: none; color: var(--ink); }
-.logo span { color: var(--brand); }
-.nav { display: flex; align-items: center; gap: 22px; }
-.nav a { text-decoration: none; color: var(--ink); font-weight: 600; font-size: .95rem; }
-.nav a:hover { color: var(--brand); }
-.nav .btn { padding: 9px 18px; color: #fff; font-size: .9rem; }
-.nav .btn:hover { color: #fff; }
-.nav-toggle { display: none; background: none; border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font-size: 1rem; cursor: pointer; color: var(--ink); }
-
-/* Hero */
-.hero { padding: 56px 0 40px; }
-.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
-.hero__lead { font-size: 1.15rem; color: var(--muted); max-width: 34em; }
-.hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 18px; }
-.hero__proof { font-size: .9rem; color: var(--muted); margin: 0; }
-.hero__art { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--accent); }
-
-/* Cards / grids */
-.grid { display: grid; gap: 22px; }
-.grid--3 { grid-template-columns: repeat(3, 1fr); }
-.card { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
-.section--alt .card { background: var(--bg); }
-.card__icon { width: 56px; height: 56px; margin-bottom: 14px; }
-.steps { counter-reset: step; }
-.steps .card { position: relative; padding-top: 52px; }
-.steps .card::before {
-  counter-increment: step; content: counter(step);
-  position: absolute; top: 16px; left: 22px; width: 28px; height: 28px; border-radius: 50%;
-  background: var(--brand); color: #fff; font-weight: 700; display: grid; place-items: center; font-size: .9rem;
+.wp-block-button__link:hover, .nexora-button:hover { background: #e5bd6d; color: var(--nexora-ink); transform: translateY(-2px); }
+.wp-block-post-title, h1, h2, h3 { letter-spacing: -.035em; line-height: 1.15; }
+.wp-block-post-content a { color: var(--nexora-blue); }
+.nexora-wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+.nexora-hero {
+  background: radial-gradient(circle at 85% 15%, rgba(214,168,79,.22), transparent 28%), linear-gradient(135deg, #101c35 0%, #183b68 72%, #24517c 100%);
+  color: #fff; padding: clamp(72px, 10vw, 132px) 0;
 }
-
-/* Pricing */
-.price { text-align: center; }
-.price--featured { border-color: var(--brand); box-shadow: var(--shadow); position: relative; }
-.price__tag { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--brand); color: #fff; font-size: .75rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
-.price__amount { font-family: Georgia, serif; font-size: 2.4rem; font-weight: 700; margin: 6px 0; }
-.price__amount small { font-size: 1rem; color: var(--muted); font-weight: 400; }
-.price ul { list-style: none; padding: 0; margin: 16px 0 22px; color: var(--muted); }
-.price li { padding: 6px 0; border-top: 1px solid var(--line); }
-.price li:first-child { border-top: 0; }
-
-/* Testimonials */
-.quote { font-size: 1.05rem; }
-.quote footer { color: var(--muted); font-size: .9rem; margin-top: 12px; }
-
-/* FAQ accordion */
-.faq { max-width: 760px; margin: 0 auto; }
-.faq__item { border-bottom: 1px solid var(--line); }
-.faq__q { margin: 0; font-size: 1.05rem; font-family: inherit; }
-.faq__btn {
-  width: 100%; text-align: left; background: none; border: 0; padding: 20px 4px; cursor: pointer;
-  font: inherit; font-weight: 700; color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 16px;
-}
-.faq__btn::after { content: "+"; font-size: 1.5rem; line-height: 1; color: var(--brand); transition: transform .2s; flex-shrink: 0; }
-.faq__btn[aria-expanded="true"]::after { transform: rotate(45deg); }
-.faq__a { overflow: hidden; max-height: 0; transition: max-height .25s ease; }
-.faq__a > div { padding: 0 4px 20px; color: var(--muted); }
-
-/* Contact form */
-.contact { max-width: 620px; margin: 0 auto; }
-.field { margin-bottom: 18px; }
-.field label { display: block; font-weight: 700; margin-bottom: 6px; font-size: .95rem; }
-.field input, .field textarea, .field select {
-  width: 100%; padding: 13px 14px; border: 1.5px solid var(--line); border-radius: 10px; background: #fff;
-  font: inherit; color: var(--ink);
-}
-.field input:focus, .field textarea:focus { border-color: var(--brand); outline: none; box-shadow: 0 0 0 3px rgba(233, 184, 114, .5); }
-.field .error { color: #a12a1b; font-size: .85rem; margin-top: 4px; min-height: 1em; }
-.hp { position: absolute; left: -9999px; height: 0; overflow: hidden; }
-.notice { padding: 14px 16px; border-radius: 10px; margin-bottom: 20px; font-weight: 600; }
-.notice--ok { background: #e6f4e8; color: #1f5f2c; border: 1px solid #b9dfbf; }
-.notice--err { background: #fbe9e6; color: #8a2417; border: 1px solid #efc0b8; }
-
-/* CTA band + footer */
-.cta-band { background: var(--brand); color: #fff; text-align: center; padding: 56px 0; }
-.cta-band h2 { color: #fff; }
-.cta-band p { color: #f3e4d4; max-width: 520px; margin-inline: auto; }
-.cta-band .btn { background: #fff; color: var(--brand-dark); border-color: #fff; }
-.cta-band .btn:hover { background: var(--accent); border-color: var(--accent); color: var(--ink); }
-.site-footer { padding: 32px 0; font-size: .9rem; color: var(--muted); text-align: center; }
-.site-footer a { color: var(--muted); }
-
-/* Responsive */
-@media (max-width: 860px) {
-  .hero .wrap { grid-template-columns: 1fr; }
-  .hero__art { order: -1; max-width: 420px; margin: 0 auto; }
-  .grid--3 { grid-template-columns: 1fr; }
-  .section { padding: 48px 0; }
-}
-@media (max-width: 720px) {
-  .nav-toggle { display: inline-block; }
-  .nav {
-    display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--bg);
-    flex-direction: column; align-items: stretch; gap: 0; padding: 8px 20px 16px; border-bottom: 1px solid var(--line);
-  }
-  .nav.is-open { display: flex; }
-  .nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
-  .nav .btn { margin-top: 12px; text-align: center; border-bottom: 0; }
-  .hero__cta .btn { width: 100%; text-align: center; }
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  * { transition: none !important; }
+.nexora-hero h1 { font-size: clamp(2.7rem, 6vw, 5.1rem); max-width: 800px; margin: 16px 0 22px; }
+.nexora-hero p { color: #e0e8f2; max-width: 680px; font-size: 1.12rem; }
+.nexora-eyebrow { color: var(--nexora-gold); font-size: .78rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.nexora-section { padding: 78px 0; }
+.nexora-section--cream { background: var(--nexora-cream); }
+.nexora-section h2 { font-size: clamp(2rem, 4vw, 3.2rem); max-width: 760px; }
+.nexora-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 34px; }
+.nexora-card { background: #fff; border: 1px solid #e7eaf0; border-radius: var(--nexora-radius); padding: 28px; box-shadow: 0 12px 35px rgba(16,28,53,.05); }
+.nexora-card .nexora-number { color: var(--nexora-gold); font-size: 1.7rem; font-weight: 850; }
+.nexora-card h3 { font-size: 1.3rem; margin: 14px 0 10px; }
+.nexora-card p { color: var(--nexora-muted); margin-bottom: 0; }
+.nexora-band { background: var(--nexora-ink); color: #fff; border-radius: 24px; padding: clamp(28px, 5vw, 54px); display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.nexora-band h2 { margin: 0 0 12px; }
+.nexora-band p { color: #d7deea; margin: 0; }
+.nexora-footer { background: #0b1428; color: #d7deea; padding: 34px 0; font-size: .92rem; }
+.nexora-footer a { color: #fff; }
+.nexora-page { padding: 64px 0 90px; }
+.nexora-page h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+.nexora-contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 32px; margin-top: 32px; }
+.nexora-contact-panel { background: var(--nexora-cream); border-radius: var(--nexora-radius); padding: 28px; }
+@media (max-width: 760px) {
+  .nexora-grid { grid-template-columns: 1fr; }
+  .nexora-band { align-items: flex-start; flex-direction: column; }
+  .nexora-contact-grid { grid-template-columns: 1fr; }
+  .nexora-section { padding: 56px 0; }
 }
